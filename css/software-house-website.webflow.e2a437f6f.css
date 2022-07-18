@@ -1,4 +1,4 @@
-/* Generated on: Mon Jul 18 2022 17:04:02 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Mon Jul 18 2022 17:20:36 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -81,7 +81,7 @@
   border-bottom-color: #3898ec;
   border-left-color: #3898ec;
   border-right-color: #3898ec;
-  background-image: url(../images/custom-checkbox-checkmark.589d534424.svg);
+  background-image: url(/images/custom-checkbox-checkmark.589d534424.svg);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4392,18 +4392,13 @@ figcaption {
   justify-self: start;
 }
 
-#w-node-_5901cd1b-f4c1-3655-cb53-3bfb9a0562c3-9a0562b0 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-}
-
-@media screen and (max-width: 767px) {
-  #w-node-ad751e2a-8edb-1e6d-1dd7-a5b961f8cb7c-61f8cb71 {
-    -webkit-box-ordinal-group: -9998;
-    -webkit-order: -9999;
-    -ms-flex-order: -9999;
-    order: -9999;
-  }
+#w-node-d7c2666c-6242-cb53-e79d-0fa6f0996832-869c1294 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
 }
