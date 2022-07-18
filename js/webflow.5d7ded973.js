@@ -126,6 +126,38 @@ module.exports = _interopRequireDefault;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+module.exports = isArray;
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -464,38 +496,6 @@ bindLoad(); // Export commonjs module
 module.exports = window.Webflow = Webflow;
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-/**
- * Checks if `value` is classified as an `Array` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array, else `false`.
- * @example
- *
- * _.isArray([1, 2, 3]);
- * // => true
- *
- * _.isArray(document.body.children);
- * // => false
- *
- * _.isArray('abc');
- * // => false
- *
- * _.isArray(_.noop);
- * // => false
- */
-var isArray = Array.isArray;
-
-module.exports = isArray;
-
-
-/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -677,7 +677,7 @@ module.exports = Object.hasOwn || function hasOwn(it, key) {
 var baseMatches = __webpack_require__(195),
     baseMatchesProperty = __webpack_require__(249),
     identity = __webpack_require__(63),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     property = __webpack_require__(258);
 
 /**
@@ -2059,7 +2059,7 @@ module.exports = isArguments;
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(3),
+var isArray = __webpack_require__(2),
     isKey = __webpack_require__(62),
     stringToPath = __webpack_require__(250),
     toString = __webpack_require__(253);
@@ -3051,7 +3051,7 @@ module.exports = baseGet;
 /* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(3),
+var isArray = __webpack_require__(2),
     isSymbol = __webpack_require__(39);
 
 /** Used to match property names within property paths. */
@@ -5527,7 +5527,7 @@ module.exports = equalArrays;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(52),
-    isArray = __webpack_require__(3);
+    isArray = __webpack_require__(2);
 
 /**
  * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -5619,7 +5619,7 @@ module.exports = stubArray;
 
 var baseTimes = __webpack_require__(238),
     isArguments = __webpack_require__(37),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isBuffer = __webpack_require__(53),
     isIndex = __webpack_require__(54),
     isTypedArray = __webpack_require__(55);
@@ -7861,8 +7861,7 @@ __webpack_require__(335);
 __webpack_require__(336);
 __webpack_require__(341);
 __webpack_require__(342);
-__webpack_require__(343);
-module.exports = __webpack_require__(344);
+module.exports = __webpack_require__(343);
 
 
 /***/ }),
@@ -7880,7 +7879,7 @@ module.exports = __webpack_require__(344);
  * Webflow: Brand pages on the subdomain
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 Webflow.define('brand', module.exports = function ($) {
   var api = {};
@@ -8346,7 +8345,7 @@ module.exports = function () {
  * Webflow: Editor loader
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 Webflow.define('edit', module.exports = function ($, _, options) {
   options = options || {}; // Exit early in test env or when inside an iframe
@@ -8514,7 +8513,7 @@ function inCypress() {
  * Webflow: focus-visible
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 /*
  * This polyfill comes from https://github.com/WICG/focus-visible
  */
@@ -8801,7 +8800,7 @@ Webflow.define('focus-visible', module.exports = function () {
  * Webflow: focus-within
  */
 
-var Webflow = __webpack_require__(2); // polyfill based off of https://github.com/matteobad/focus-within-polyfill
+var Webflow = __webpack_require__(3); // polyfill based off of https://github.com/matteobad/focus-within-polyfill
 
 
 Webflow.define('focus-within', module.exports = function () {
@@ -8909,7 +8908,7 @@ Webflow.define('focus-within', module.exports = function () {
  * Webflow: focus
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 /*
  * Safari has a weird bug where it doesn't support :focus for links with hrefs,
  * buttons, and input[type=button|submit], so we listen for mousedown events
@@ -9095,7 +9094,7 @@ module.exports = api;
  * Webflow: Interactions 2
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 var ix2 = __webpack_require__(138);
 
@@ -11799,7 +11798,7 @@ var Stack = __webpack_require__(97),
     equalByTag = __webpack_require__(231),
     equalObjects = __webpack_require__(235),
     getTag = __webpack_require__(59),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isBuffer = __webpack_require__(53),
     isTypedArray = __webpack_require__(55);
 
@@ -12833,7 +12832,7 @@ module.exports = toString;
 
 var Symbol = __webpack_require__(23),
     arrayMap = __webpack_require__(112),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isSymbol = __webpack_require__(39);
 
 /** Used as references for various `Number` constants. */
@@ -12935,7 +12934,7 @@ module.exports = baseHasIn;
 
 var castPath = __webpack_require__(38),
     isArguments = __webpack_require__(37),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isIndex = __webpack_require__(54),
     isLength = __webpack_require__(56),
     toKey = __webpack_require__(24);
@@ -14735,7 +14734,7 @@ var arrayReduce = __webpack_require__(272),
     baseEach = __webpack_require__(121),
     baseIteratee = __webpack_require__(10),
     baseReduce = __webpack_require__(276),
-    isArray = __webpack_require__(3);
+    isArray = __webpack_require__(2);
 
 /**
  * Reduces `collection` to a value which is the accumulated result of running
@@ -15597,7 +15596,7 @@ module.exports = size;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(15),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isObjectLike = __webpack_require__(12);
 
 /** `Object#toString` result references. */
@@ -16179,7 +16178,7 @@ module.exports = nativeKeysIn;
 var baseKeys = __webpack_require__(57),
     getTag = __webpack_require__(59),
     isArguments = __webpack_require__(37),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isArrayLike = __webpack_require__(16),
     isBuffer = __webpack_require__(53),
     isPrototype = __webpack_require__(58),
@@ -16311,7 +16310,7 @@ module.exports = mapValues;
 var arrayEach = __webpack_require__(304),
     baseEach = __webpack_require__(121),
     castFunction = __webpack_require__(305),
-    isArray = __webpack_require__(3);
+    isArray = __webpack_require__(2);
 
 /**
  * Iterates over elements of `collection` and invokes `iteratee` for each element.
@@ -17647,7 +17646,7 @@ var LodashWrapper = __webpack_require__(66),
     flatRest = __webpack_require__(313),
     getData = __webpack_require__(127),
     getFuncName = __webpack_require__(128),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isLaziable = __webpack_require__(326);
 
 /** Error message constants. */
@@ -17823,7 +17822,7 @@ module.exports = baseFlatten;
 
 var Symbol = __webpack_require__(23),
     isArguments = __webpack_require__(37),
-    isArray = __webpack_require__(3);
+    isArray = __webpack_require__(2);
 
 /** Built-in value references. */
 var spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
@@ -18121,7 +18120,7 @@ module.exports = isLaziable;
 var LazyWrapper = __webpack_require__(68),
     LodashWrapper = __webpack_require__(66),
     baseLodash = __webpack_require__(67),
-    isArray = __webpack_require__(3),
+    isArray = __webpack_require__(2),
     isObjectLike = __webpack_require__(12),
     wrapperClone = __webpack_require__(328);
 
@@ -18410,7 +18409,7 @@ module.exports = baseClamp;
  * Webflow: Auto-select links to current page or section
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 Webflow.define('links', module.exports = function ($, _) {
   var api = {};
@@ -18540,7 +18539,7 @@ Webflow.define('links', module.exports = function ($, _) {
  * Webflow: Smooth scroll
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 Webflow.define('scroll', module.exports = function ($) {
   /**
@@ -18797,7 +18796,7 @@ Webflow.define('scroll', module.exports = function ($) {
  * Adds a 'swipe' event to desktop and mobile
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 Webflow.define('touch', module.exports = function ($) {
   var api = {};
@@ -18936,7 +18935,7 @@ Webflow.define('touch', module.exports = function ($) {
  * Webflow: Dropdown component
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 var IXEvents = __webpack_require__(25);
 
@@ -19471,7 +19470,7 @@ var _interopRequireDefault = __webpack_require__(1);
 
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(337));
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 Webflow.define('forms', module.exports = function ($, _) {
   var api = {};
@@ -20194,7 +20193,7 @@ module.exports = _nonIterableRest;
  * Webflow: Lightbox component
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 var CONDITION_INVISIBLE_CLASS = 'w-condition-invisible';
 var CONDVIS_SELECTOR = '.' + CONDITION_INVISIBLE_CLASS;
@@ -20982,7 +20981,7 @@ Webflow.define('lightbox', module.exports = function ($) {
  * Webflow: Navbar component
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 var IXEvents = __webpack_require__(25);
 
@@ -21581,7 +21580,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
  * Webflow: Tabs component
  */
 
-var Webflow = __webpack_require__(2);
+var Webflow = __webpack_require__(3);
 
 var IXEvents = __webpack_require__(25);
 
@@ -21917,225 +21916,6 @@ Webflow.define('tabs', module.exports = function ($) {
     }).start({
       opacity: 1
     });
-  } // Export module
-
-
-  return api;
-});
-
-/***/ }),
-/* 344 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
- // @wf-will-never-add-flow-to-this-file
-
-/* globals window, document */
-
-/* eslint-disable no-var */
-
-/**
- * Webflow: Maps widget
- */
-
-var Webflow = __webpack_require__(2);
-
-Webflow.define('maps', module.exports = function ($, _) {
-  var api = {};
-  var $doc = $(document);
-  var google = null;
-  var $maps;
-  var namespace = '.w-widget-map'; // The API key is injected here from the Webflow Integrations tab on the site's dashboard
-
-  var googleMapsApiKey = ''; // -----------------------------------
-  // Module methods
-
-  api.ready = function () {
-    // Init Maps on the front-end
-    if (!Webflow.env()) {
-      initMaps();
-    }
-  };
-
-  api.destroy = removeListeners; // -----------------------------------
-  // Private methods
-
-  function initMaps() {
-    $maps = $doc.find(namespace);
-
-    if (!$maps.length) {
-      return;
-    }
-
-    if (google === null) {
-      $.getScript('https://maps.googleapis.com/maps/api/js?v=3.31&sensor=false&callback=_wf_maps_loaded&key=' + googleMapsApiKey);
-      window._wf_maps_loaded = mapsLoaded;
-    } else {
-      mapsLoaded();
-    }
-
-    function mapsLoaded() {
-      window._wf_maps_loaded = function () {};
-
-      google = window.google;
-      $maps.each(renderMap);
-      removeListeners();
-      addListeners();
-    }
-  }
-
-  function removeListeners() {
-    Webflow.resize.off(resizeMaps);
-    Webflow.redraw.off(resizeMaps);
-  }
-
-  function addListeners() {
-    Webflow.resize.on(resizeMaps);
-    Webflow.redraw.on(resizeMaps);
-  } // Render map onto each element
-
-
-  function renderMap(i, el) {
-    var data = $(el).data();
-    getState(el, data);
-  }
-
-  function resizeMaps() {
-    $maps.each(resizeMap);
-  } // Resize map when window changes
-
-
-  function resizeMap(i, el) {
-    var state = getState(el);
-    google.maps.event.trigger(state.map, 'resize');
-    state.setMapPosition();
-  } // Store state on element data
-
-
-  var store = 'w-widget-map';
-
-  function getState(el, data) {
-    var state = $.data(el, store);
-
-    if (state) {
-      return state;
-    }
-
-    var hasTooltip = typeof data.widgetTooltip === 'string' && data.widgetTooltip !== '';
-    var $el = $(el);
-    var title = $el.attr('title');
-    var markerTitle = 'Map pin';
-
-    if (title && data.widgetTooltip) {
-      markerTitle = "Map pin on ".concat(title, " showing location of ").concat(data.widgetTooltip);
-    } else if (title && !data.widgetTooltip) {
-      markerTitle = "Map pin on ".concat(title);
-    } else if (!title && data.widgetTooltip) {
-      markerTitle = "Map pin showing location of ".concat(data.widgetTooltip);
-    }
-
-    state = $.data(el, store, {
-      // Default options
-      latLng: '51.511214,-0.119824',
-      tooltip: '',
-      style: 'roadmap',
-      zoom: 12,
-      // Marker
-      marker: new google.maps.Marker({
-        draggable: false,
-        title: markerTitle
-      }),
-      // Tooltip infowindow
-      infowindow: new google.maps.InfoWindow({
-        disableAutoPan: true
-      })
-    }); // LatLng center point
-
-    if (typeof data.widgetLatlng === 'string' && data.widgetLatlng.length !== '') {
-      state.latLng = data.widgetLatlng;
-    }
-
-    var coords = state.latLng.split(',');
-    var latLngObj = new google.maps.LatLng(coords[0], coords[1]);
-    state.latLngObj = latLngObj; // Disable touch events
-
-    var mapDraggable = !(Webflow.env.touch && !data.enableTouch); // Map instance
-
-    state.map = new google.maps.Map(el, {
-      center: state.latLngObj,
-      zoom: state.zoom,
-      maxZoom: 20,
-      mapTypeControl: false,
-      panControl: false,
-      streetViewControl: false,
-      scrollwheel: data.enableScroll,
-      draggable: mapDraggable,
-      zoomControl: true,
-      zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.SMALL
-      },
-      mapTypeId: state.style
-    });
-    state.marker.setMap(state.map); // Set map position and offset
-
-    state.setMapPosition = function () {
-      state.map.setCenter(state.latLngObj);
-      var offsetX = 0;
-      var offsetY = 0;
-      var padding = $el.css(['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft']);
-      offsetX -= parseInt(padding.paddingLeft, 10);
-      offsetX += parseInt(padding.paddingRight, 10);
-      offsetY -= parseInt(padding.paddingTop, 10);
-      offsetY += parseInt(padding.paddingBottom, 10);
-
-      if (offsetX || offsetY) {
-        state.map.panBy(offsetX, offsetY);
-      }
-
-      $el.css('position', ''); // Remove injected position
-    }; // Fix position after first tiles have loaded
-
-
-    google.maps.event.addListener(state.map, 'tilesloaded', function () {
-      google.maps.event.clearListeners(state.map, 'tilesloaded');
-      state.setMapPosition();
-    }); // Set initial position
-
-    state.setMapPosition();
-    state.marker.setPosition(state.latLngObj);
-    state.infowindow.setPosition(state.latLngObj); // Draw tooltip
-
-    if (hasTooltip) {
-      var tooltip = data.widgetTooltip;
-      state.tooltip = tooltip;
-      state.infowindow.setContent(tooltip);
-
-      if (!state.infowindowOpen) {
-        state.infowindow.open(state.map, state.marker);
-        state.infowindowOpen = true;
-      }
-    } // Map style - options.style
-
-
-    var style = data.widgetStyle;
-
-    if (style) {
-      state.map.setMapTypeId(style);
-    } // Zoom - options.zoom
-
-
-    var zoom = data.widgetZoom;
-
-    if (zoom != null) {
-      state.zoom = zoom;
-      state.map.setZoom(Number(zoom));
-    } // Click marker to open in google maps
-
-
-    google.maps.event.addListener(state.marker, 'click', function () {
-      window.open('https://maps.google.com/?z=' + state.zoom + '&daddr=' + state.latLng);
-    });
-    return state;
   } // Export module
 
 
