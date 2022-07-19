@@ -508,8 +508,5 @@ function _0x50e6() {
         '.21v5.17Z\x22',
         '6.47h5.61v'
     ];
-    _0x50e6 = function () {
-        return _0x3b676c;
-    };
-    return _0x50e6();
+
 }
